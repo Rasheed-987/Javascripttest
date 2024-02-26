@@ -19,11 +19,25 @@
     let h1=document.querySelector(".h1");
     let h2=document.querySelector(".h2");
     
-        data.onclick=(e)=>{
+    
+    
+    
+    data.onclick=(e)=>{
               let axis=e.clientX + " , " + e.clientY;
-            const time=new Date();
-            h2.innerHTML=axis;
-            h1.innerHTML=time;
+              var currentDate = new Date();
+
+var year = currentDate.getFullYear();
+var day = currentDate.getDate();
+var hour = currentDate.getHours();
+var minute = currentDate.getMinutes();
+var second = currentDate.getSeconds();
+
+var dateTime = year +  '-' + day + ' ' + hour + ':' + minute + ':' + second;
+
+
+            h2.innerHTML=axis;    
+    // console.log(time);
+            h1.innerHTML=dateTime;
         }
     </script>
 </body>
