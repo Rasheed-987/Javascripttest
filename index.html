@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+
+    }
+</style>
+<body class="body">
+        <h1 class="h1"></h1>
+        <h2 class="h2"></h2>
+    <script>
+        let data=document.querySelector(".body");
+    let h1=document.querySelector(".h1");
+    let h2=document.querySelector(".h2");
+    
+        data.onclick=(e)=>{
+              let axis=e.clientX + " , " + e.clientY;
+            const time=new Date();
+            h2.innerHTML=axis;
+            h1.innerHTML=time;
+        }
+    </script>
+</body>
+</html>
